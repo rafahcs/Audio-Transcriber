@@ -1,5 +1,6 @@
 import io
-
+import os
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 import requests
 import streamlit as st
 from audiorecorder import audiorecorder
