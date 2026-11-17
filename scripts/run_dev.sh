@@ -80,14 +80,9 @@ export PYTHONPATH="$ROOT"
 
 info "Verificando modelo Whisper ..."
 WHISPER_READY=$(python3 -c "
-import os
-os.environ['HF_HUB_DISABLE_XET'] = '1'
 try:
-    from config.settings import settings
-    if settings.hf_token:
-        os.environ['HF_TOKEN'] = settings.hf_token
-
     from faster_whisper.utils import download_model
+    from config.settings import settings
     download_model(settings.whisper_model_size, cache_dir=settings.whisper_model_dir)
     print('ok')
 except Exception as e:

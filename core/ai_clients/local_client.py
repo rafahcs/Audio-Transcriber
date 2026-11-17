@@ -13,10 +13,10 @@ class LocalClient(BaseAIClient):
 
     def is_available(self) -> bool:
         try:
-            import ollama
-            ollama.list()
-            return True
-        except Exception:
+            models = self._get_client().list().models
+            return any(model.model.split(":", 1)[0] == MODEL for model in models)
+        except Exception as exc:
+            logger.debug("Ollama indisponível: %s", exc)
             return False
 
     def _get_client(self):

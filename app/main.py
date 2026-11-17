@@ -33,7 +33,7 @@ class TextReportRequest(BaseModel):
 def health():
     return {
         "status": "ok",
-        "model_ready": _pipeline._transcription.is_ready(),
+        "transcription_available": _pipeline._transcription.is_ready(),
         "ai_available": _ai_service.is_available(),
     }
 

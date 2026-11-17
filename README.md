@@ -2,6 +2,8 @@
 
 Aplicação local para gravar ou enviar áudio, transcrever em português e, opcionalmente, organizar o texto em um relato de suporte de TI.
 
+> **Documentação completa:** o [Guia do Projeto](docs/GUIA_DO_PROJETO.md) explica o uso passo a passo para quem não programa e descreve, para programadores, a arquitetura, a API, a configuração e cada arquivo e pasta.
+
 ## Requisitos
 
 - Windows 10/11 e Python 3.10 ou mais recente.
@@ -24,6 +26,8 @@ Inicie a aplicação:
 ```
 
 O script cria o ambiente Python `.venv` se necessário, instala as dependências e abre janelas separadas para o backend e a interface. Acesse:
+
+Acesso ao ambiente `.venv`: .\.venv\Scripts\Activate.ps1
 
 - Interface: <http://localhost:8501>
 - Documentação e teste interativo da API: <http://localhost:8000/docs>

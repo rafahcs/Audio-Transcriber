@@ -1,0 +1,12 @@
+2026-11-11 13:24:53 [INFO] services.transcription_service: Usando WhisperEngine.
+2026-11-11 13:24:53 [ERROR] fastapi: Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-11-11 13:25:18 [INFO] services.transcription_service: Usando WhisperEngine.
+2026-11-11 13:26:07 [INFO] services.transcription_service: Usando WhisperEngine.
+2026-11-11 13:27:50 [INFO] services.transcription_service: Usando WhisperEngine.
+2026-11-11 13:28:02 [INFO] services.transcription_service: Usando WhisperEngine.
+2026-11-16 13:30:38 [INFO] services.transcription_service: Usando WhisperEngine.
+2026-11-16 18:01:32 [INFO] services.transcription_service: Usando WhisperEngine.

@@ -1,6 +1,5 @@
 import io
-import os
-API_URL = os.getenv("API_URL", "http://localhost:8000")
+
 import requests
 import streamlit as st
 from audiorecorder import audiorecorder
@@ -74,11 +73,11 @@ with st.sidebar:
         info = resp.json()
         st.success("Backend online")
         st.caption(
-            f"Vosk: {'✓' if info.get('model_ready') else '✗'}  |  "
+            f"Transcrição: {'✓' if info.get('transcription_available') else '✗'}  |  "
             f"IA: {'✓' if info.get('ai_available') else '✗'}"
         )
     except Exception:
-        st.error("Backend offline — rode scripts/run_dev.sh")
+        st.error("Backend offline — execute scripts\\run_dev.ps1 no PowerShell.")
 
 
 # --- Resultado (se já tiver relato estruturado) ---

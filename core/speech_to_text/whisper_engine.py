@@ -1,3 +1,4 @@
+from importlib.util import find_spec
 import logging
 import os
 import ssl
@@ -18,10 +19,7 @@ class WhisperEngine(SpeechToTextEngine):
         self._model = None
 
     def is_ready(self) -> bool:
-        try:
-            return True
-        except ImportError:
-            return False
+        return find_spec("faster_whisper") is not None
 
     def _load_model(self):
         if self._model is None:
