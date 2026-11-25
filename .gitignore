@@ -6,3 +6,4 @@ models/
 .vscode/
 *.env
 data/
+.ddev/

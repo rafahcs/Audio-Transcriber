@@ -1,0 +1,5 @@
+.venv
+.git
+.ddev
+**/__pycache__
+data
